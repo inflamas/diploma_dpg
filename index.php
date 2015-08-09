@@ -17,6 +17,7 @@ $action = isset($_GET['action']) ? $_GET['action'] : 'index';
 $controllerNamespace = 'Controllers\\Frontend\\';
 $controllerName = $controllerNamespace . ucfirst($controller) . 'Controller';
 
+
 if (class_exists($controllerName)) {
     $requestController = new $controllerName($basePath, $em);
     $requestController->run($action);
