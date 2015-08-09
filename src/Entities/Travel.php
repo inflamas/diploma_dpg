@@ -33,7 +33,7 @@ class Travel {
     private $endDate;
 
     /**
-     * @ORM\Column(type="decimal", precision=5, scale=2) //ESTA BN PARA VALORES MONETARIOS?
+     * @ORM\Column(type="decimal", precision=5, scale=2, nullable=true) //ESTA BN PARA VALORES MONETARIOS?
      */
     private $price;
 
@@ -70,7 +70,7 @@ class Travel {
     /**
      * @ORM\ManyToOne(targetEntity="Entities\Category", inversedBy="travel") 
      */
-    private $categories;
+    private $category;
 
     function getId() {
         return $this->id;
@@ -143,8 +143,8 @@ class Travel {
         return $this->region;
     }
 
-    function getCategories() {
-        return $this->categories;
+    function getCategory() {
+        return $this->category;
     }
 
     function setImage($image) {
@@ -163,8 +163,8 @@ class Travel {
         $this->region = $region;
     }
 
-    function setCategories($categories) {
-        $this->categories = $categories;
+    function setCategory($categories) {
+        $this->category = $categories;
     }
 
 

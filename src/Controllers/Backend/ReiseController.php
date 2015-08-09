@@ -16,12 +16,16 @@ class ReiseController extends AbstractBase
     
     public function saveAction(){
         $travel = new Travel();
-        
+                
         $region = $this->em->getRepository('Entities\Region')->findById($_POST['region']);
         
-        //var_dump($region);die();
         $travel->setRegion($region[0]);
         $travel->setTitle($_POST['title']);
+        $startDate = new \DateTime($_POST['startDate']);
+        $travel->setStarDate($startDate);
+        
+        $endDate = new \DateTime($_POST['endDate']);
+        $travel->setEndDate($endDate);
         
         $this->em->persist($travel);
         $this->em->flush();
