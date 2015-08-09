@@ -1,6 +1,6 @@
 <?php
-
 namespace Controllers\Backend;
+
 use Controllers\AbstractBase;
 use Entities\Travel;
 
@@ -19,8 +19,8 @@ class ReiseController extends AbstractBase
         
         $region = $this->em->getRepository('Entities\Region')->findById($_POST['region']);
         
-        //print_r($region);die();
-        $travel->setRegion($region);
+        //var_dump($region);die();
+        $travel->setRegion($region[0]);
         $travel->setTitle($_POST['title']);
         
         $this->em->persist($travel);
