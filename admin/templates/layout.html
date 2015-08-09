@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>MITARBEITER BEREICH</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link href="../css/styles.css" rel="stylesheet" type="text/css"/>
+        
+    </head>
+    <body>
+        <!--<?php include_once INCLUDE_PATH.'navi.html';?>-->
+        
+        <?php 
+
+        if(!empty($template)) {
+            include_once INCLUDE_ADMIN_PATH .$template;
+        }        
+        ?>
+        
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="<?php echo JS_PATH; ?>basic.js"></script>
+    </body>
+</html>
