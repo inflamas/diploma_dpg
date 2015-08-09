@@ -25,7 +25,7 @@ class Travel {
     /**
      * @ORM\Column(type="datetime", length=50) 
      */
-    private $starDate;
+    private $startDate;
 
     /**
      * @ORM\Column(type="datetime", length=50)
@@ -81,7 +81,7 @@ class Travel {
     }
 
     function getStarDate() {
-        return $this->starDate;
+        return $this->startDate;
     }
 
     function getEndDate() {
@@ -109,7 +109,7 @@ class Travel {
     }
 
     function setStarDate($starDate) {
-        $this->starDate = $starDate;
+        $this->startDate = $starDate;
     }
 
     function setEndDate($endDate) {
