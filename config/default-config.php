@@ -4,7 +4,7 @@ $connOptions = array(
     'driver'   => 'pdo_mysql',
     'host' => 'localhost',
     'user'     => 'root',
-    'password' => '',
+    'password' => 'archenemy',
     'dbname'   => 'db_travel',
     'charset' => 'utf8',
     'driverOptions' => array(1002 => 'SET NAMES utf8')

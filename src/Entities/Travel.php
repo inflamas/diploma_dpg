@@ -70,7 +70,7 @@ class Travel {
     /**
      * @ORM\ManyToOne(targetEntity="Entities\Category", inversedBy="travel") 
      */
-    private $categories;
+    private $category;
 
     function getId() {
         return $this->id;
