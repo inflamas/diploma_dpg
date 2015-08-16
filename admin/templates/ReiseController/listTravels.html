@@ -1,0 +1,10 @@
+<?php
+
+foreach($travels as $travel) {
+    echo "<br>";
+    echo $travel->getId() . " --- " . $travel->getTitle() . "----" . $travel->getStartDate()->format('Y-m-d H:i:s') . "----" . $travel->getEndDate()->format('Y-m-d H:i:s')
+    . ' ' . '<a href="' . BASE_PATH . 'admin/?action=delete&id=' . $travel->getId() . '">Delete</a>'
+    . ' ' . '<a href="' . BASE_PATH . 'admin/?action=edit&id=' . $travel->getId() . '">Edit</a>';
+
+}
+?>

@@ -4,7 +4,7 @@ $connOptions = array(
     'driver'   => 'pdo_mysql',
     'host' => 'localhost',
     'user'     => 'root',
-    'password' => '',
+    'password' => 'archenemy',
     'dbname'   => 'db_travel',
     'charset' => 'utf8',
     'driverOptions' => array(1002 => 'SET NAMES utf8')
@@ -18,7 +18,7 @@ $appOptions = array(
 
 //  definen constantes que se puede ser usadas en el codigo.. independiente de la estructura del proyecto.....
 
-define('BASE_PATH', '/diploma_jdpg/');
+define('BASE_PATH', '/diploma_david_pena_galvis/');
 define('VIEW_PATH', BASE_PATH.'template/');
 define('INCLUDE_PATH', $_SERVER['DOCUMENT_ROOT'].VIEW_PATH);
 define('INCLUDE_ADMIN_PATH', $_SERVER['DOCUMENT_ROOT'] . BASE_PATH . '/admin/templates/' );

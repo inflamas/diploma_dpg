@@ -4,9 +4,9 @@ namespace Controllers\Backend;
 use Controllers\AbstractBase;
 use Entities\Travel;
 
-class ReiseController extends AbstractBase
-{
-    public function indexAction(){
+class ReiseController extends AbstractBase {
+
+    public function showCreateFormAction(){
         $regionsRepository = $this->em->getRepository('Entities\Region');
         $regions = $regionsRepository->findAll();
         $this->addContext('regions', $regions);
@@ -14,7 +14,7 @@ class ReiseController extends AbstractBase
         $this->setTemplate('form.html');
     }
     
-    public function saveAction(){
+    public function saveAction() {
         $travel = new Travel();
                 
         $region = $this->em->getRepository('Entities\Region')->findById($_POST['region']);
@@ -31,5 +31,25 @@ class ReiseController extends AbstractBase
         $this->em->flush();
         
         
+    }
+
+    public function listAllTravelAction() {
+        $travels = $this->em->getRepository('Entities\Travel')->findAll();
+
+        $this->addContext('travels', $travels);
+        $this->setTemplate('listTravels.html');
+    }
+
+    public function deleteAction() {
+        $id = $_GET['id'];
+        $travel= $this->em->getRepository('Entities\Travel')->find($id);
+
+        $this->em->remove($travel);
+        $this->em->flush();
+    }
+
+    public function editAction() {
+        $id = $_GET['id'];
+
     }
 }

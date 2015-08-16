@@ -80,7 +80,7 @@ class Travel {
         return $this->title;
     }
 
-    function getStarDate() {
+    function getStartDate() {
         return $this->startDate;
     }
 
